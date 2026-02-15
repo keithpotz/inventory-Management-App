@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app   ="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sms_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".SmsNotificationsActivity">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/smsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="SMS Notifications"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Explanation -->
+    <TextView
+        android:id="@+id/smsExplanation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="This feature will allow the app to send you SMS alerts when your inventory runs low."
+        app:layout_constraintTop_toBottomOf="@id/smsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Request Permission Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/requestSmsPermission"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Enable SMS Notifications"
+        app:layout_constraintTop_toBottomOf="@id/smsExplanation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Status feedback -->
+    <TextView
+        android:id="@+id/permissionStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Permission status: unknown"
+        app:layout_constraintTop_toBottomOf="@id/requestSmsPermission"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Send Test SMS Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sendTestSms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Send Test SMS"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/permissionStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
